@@ -4,6 +4,7 @@
     <Main />
     <Prefooter />
     <Footer />
+    <Postfooter />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import Header from "@/components/SiteHeader.vue";
 import Main from "@/components/site_main.vue";
 import Prefooter from "@/components/site_prefooter.vue";
 import Footer from "@/components/site_footer.vue";
+import Postfooter from "@/components/site_postfooter.vue";
 
 export default {
   name: "App",
@@ -19,7 +21,8 @@ export default {
     Header,
     Main,
     Prefooter,
-    Footer
+    Footer,
+    Postfooter
   },
 };
 </script>
