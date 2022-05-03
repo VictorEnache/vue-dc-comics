@@ -2,18 +2,21 @@
   <div id="app">
     <Header/>
     <Main/>
+    <Prefooter/>
   </div>
 </template>
 
 <script>
 import Header from '@/components/SiteHeader.vue';
 import Main from '@/components/site_main.vue';
+import Prefooter from '@/components/site_prefooter.vue';
 
 export default {
   name: 'App',
   components: {
     Header,
-    Main
+    Main,
+    Prefooter
   }
 }
 </script>
