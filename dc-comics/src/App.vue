@@ -1,28 +1,31 @@
 <template>
   <div id="app">
-    <Header/>
-    <Main/>
-    <Prefooter/>
+    <Header />
+    <Main />
+    <Prefooter />
+    <Footer />
   </div>
 </template>
 
 <script>
-import Header from '@/components/SiteHeader.vue';
-import Main from '@/components/site_main.vue';
-import Prefooter from '@/components/site_prefooter.vue';
+import Header from "@/components/SiteHeader.vue";
+import Main from "@/components/site_main.vue";
+import Prefooter from "@/components/site_prefooter.vue";
+import Footer from "@/components/site_footer.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Header,
     Main,
-    Prefooter
-  }
-}
+    Prefooter,
+    Footer
+  },
+};
 </script>
 
 <style lang="scss">
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -30,11 +33,10 @@ export default {
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-/*   -webkit-font-smoothing: antialiased;
+  /*   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px; */
 }
-
 </style>
