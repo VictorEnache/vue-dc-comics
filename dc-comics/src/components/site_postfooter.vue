@@ -5,11 +5,7 @@
             <div class="social">
                 <h3>FOLLOW US</h3>
                 <ul>
-                    <li><img src="../assets/img/footer-twitter.png" alt=""></li>
-                    <li><img src="../assets/img/footer-twitter.png" alt=""></li>
-                    <li><img src="../assets/img/footer-twitter.png" alt=""></li>
-                    <li><img src="../assets/img/footer-twitter.png" alt=""></li>
-                    <li><img src="../assets/img/footer-twitter.png" alt=""></li>
+                    <li :key='image' v-for='image in social_images'><img :src="image" alt=""></li>
                 </ul>
             </div>
         </div>
@@ -18,7 +14,19 @@
 
 <script>
 export default {
-    name: 'site_prefooter'
+    name: 'site_prefooter',
+
+    data(){
+        return{
+            social_images:[
+                require("../assets/img/footer-facebook.png"),
+                require("../assets/img/footer-twitter.png"),
+                require("../assets/img/footer-youtube.png"),
+                require("../assets/img/footer-pinterest.png"),
+                require("../assets/img/footer-periscope.png"),
+            ]
+        }
+    }
 }
 </script>
 
@@ -53,7 +61,7 @@ export default {
                 ul{
                     list-style: none;
                     display: flex;
-                    column-gap: 2rem;
+                    column-gap: 19px;
                 }
             }
         }
