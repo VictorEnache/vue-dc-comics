@@ -92,12 +92,13 @@ export default {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      align-items: flex-start;
-      
-      
+      align-content: flex-start;
 
       .col{
         width: calc(100% * 3/12);
+        margin-top:1rem;
+        
+        
       }
     }
   }
