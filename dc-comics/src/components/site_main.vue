@@ -126,18 +126,27 @@ export default {
     .row{
         display: flex;
         flex-wrap: wrap;
-        column-gap: 1rem;
+        column-gap: 22px;
+        
 
         .card{
-            width: calc(100% / 6 - 1rem + 1rem/6);
+          padding-top: 50px;
+            width: calc(100% / 6 - 22px + 22px/6);
 
             .image{
+              
 
                 img{
                     width: 100%;
+                    aspect-ratio: 1 / 1;
                     object-fit: cover;
+                    object-position: top;
                 }
 
+            }
+
+            .text{
+              text-transform: uppercase;
             }
         }
     }
