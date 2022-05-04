@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Header />
+    <Jumbotron />
     <Main />
     <Prefooter />
     <Footer />
@@ -14,6 +15,7 @@ import Main from "@/components/site_main.vue";
 import Prefooter from "@/components/site_prefooter.vue";
 import Footer from "@/components/site_footer.vue";
 import Postfooter from "@/components/site_postfooter.vue";
+import Jumbotron from "@/components/hero_image.vue";
 
 export default {
   name: "App",
@@ -22,7 +24,8 @@ export default {
     Main,
     Prefooter,
     Footer,
-    Postfooter
+    Postfooter,
+    Jumbotron
   },
 };
 </script>
