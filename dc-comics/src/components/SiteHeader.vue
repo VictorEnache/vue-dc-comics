@@ -6,7 +6,7 @@
             </div>
             <nav>
                 <ul>
-                    <li :key='link' v-for='link in navigation'>{{link}}</li>
+                    <li :key='link' v-for='link in navigation' :class='link === "COMICS" ? "active" : ""'>{{link}}</li>
                 </ul>
             </nav>
         </div>
@@ -46,9 +46,11 @@ export default {
          width: 1080px;
          display: flex;
          justify-content: space-between;
+         align-items: center;
 
          .logo{
-             width:80px;
+             height:80px;
+             width: 80px;
 
              img{
                  width: 100%;
@@ -58,16 +60,23 @@ export default {
          }
 
          nav{
-             height:80px;
-             
+                         
 
              ul{
-                 height: 100%;
+                 
                  list-style: none;
                  display: flex;
-                 column-gap: 0.5rem;
-                 align-items: center;
-                 font-size: 13px;
+                 column-gap: 35px;
+                 font-size: 11px;
+
+                 li{
+                     padding: 50px 0;
+                 }
+
+                 .active{
+                    color: blue;
+                    border-bottom: 4px solid blue;
+                 }
                  
              }
          }
