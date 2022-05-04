@@ -6,16 +6,7 @@
             </div>
             <nav>
                 <ul>
-                    <li>CHARACTERS</li>
-                    <li>COMICS</li>
-                    <li>MOVIES</li>
-                    <li>TV</li>
-                    <li>GAMES</li>
-                    <li>COLLECTIBLES</li>
-                    <li>VIDEOS</li>
-                    <li>FANS</li>
-                    <li>NEWS</li>
-                    <li>SHOP</li>
+                    <li :key='link' v-for='link in navigation'>{{link}}</li>
                 </ul>
             </nav>
         </div>
@@ -26,7 +17,24 @@
 
 
 export default {
-    name: 'SiteHeader'
+    name: 'SiteHeader',
+
+    data() {
+        return{
+            navigation:[
+                'CHARACTERS',
+                'COMICS',
+                'MOVIES',
+                'TV',
+                'GAMES',
+                'COLLECTIBLES',
+                'VIDEOS',
+                'FANS',
+                'NEWS',
+                'SHOP'
+            ]
+        }
+    }
 }
 </script>
 
@@ -57,8 +65,9 @@ export default {
                  height: 100%;
                  list-style: none;
                  display: flex;
-                 column-gap: 1rem;
+                 column-gap: 0.5rem;
                  align-items: center;
+                 font-size: 13px;
                  
              }
          }
