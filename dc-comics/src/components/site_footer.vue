@@ -1,54 +1,17 @@
 <template>
   <footer id="site_footer">
     <div class="container">
-      <div class="dc_comics">
-        <h3>DC COMICS</h3>
-        <nav>
-          <ul>
-            <li><a href="#">Characters</a></li>
-            <li><a href="#">Comics</a></li>
-            <li><a href="#">Movies</a></li>
-            <li><a href="#">TV</a></li>
-            <li><a href="#">Games</a></li>
-            <li><a href="#">Videos</a></li>
-            <li><a href="#">News</a></li>
-          </ul>
-        </nav>
-        <h3 class="shop">SHOP</h3>
-        <nav>
+      <div class="row">
+        <div class="col" :key="colonna" v-for="colonna in colonne">
+          <h3>{{ colonna.title }}</h3>
+          <nav>
             <ul>
-                <li><a href="#">Videos</a></li>
-                <li><a href="#">News</a></li>
+              <li :key="link" v-for="link in colonna.links">
+                <a href="#">{{ link }}</a>
+              </li>
             </ul>
-        </nav>
-      </div>
-      <div class="dc">
-        <h3>DC COMICS</h3>
-        <nav>
-          <ul>
-            <li><a href="#">Characters</a></li>
-            <li><a href="#">Comics</a></li>
-            <li><a href="#">Movies</a></li>
-            <li><a href="#">TV</a></li>
-            <li><a href="#">Games</a></li>
-            <li><a href="#">Videos</a></li>
-            <li><a href="#">News</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="sites">
-        <h3>DC COMICS</h3>
-        <nav>
-          <ul>
-            <li><a href="#">Characters</a></li>
-            <li><a href="#">Comics</a></li>
-            <li><a href="#">Movies</a></li>
-            <li><a href="#">TV</a></li>
-            <li><a href="#">Games</a></li>
-            <li><a href="#">Videos</a></li>
-            <li><a href="#">News</a></li>
-          </ul>
-        </nav>
+          </nav>
+        </div>
       </div>
     </div>
   </footer>
@@ -57,6 +20,58 @@
 <script>
 export default {
   name: "site_footer",
+
+  data() {
+    return {
+      colonne: [
+        {
+          title: "DC COMICS",
+          links: [
+            "Characters",
+            "Comics",
+            "Movies",
+            "TV",
+            "Games",
+            "Videos",
+            "News",
+          ],
+        },
+
+        {
+          title: "SHOP",
+          links: ["Shop DC", "Shop DC Collectibles"],
+        },
+
+        {
+          title: "DC",
+          links: [
+            "Terms OF Use",
+            "Privacy policy (New)",
+            "Ad Choices",
+            "Advertising",
+            "Jobs",
+            "Subscriptions",
+            "Talent Workshop",
+            "CPSC Certificates",
+            "Ratings",
+            "Shop Help",
+            "Contact Us",
+          ],
+        },
+
+        {
+          title: "SITES",
+          links: [
+            "DC",
+            "MAD Magazzine",
+            "DC Kids",
+            "DC universe",
+            "DC Power Visa",
+          ],
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -70,17 +85,21 @@ export default {
     width: 1080px;
     margin: auto;
     background-color: gray;
-    display: flex;
-    column-gap: 2.5rem;
-    padding: 3rem 0;
-      
-    .dc_comics{
 
-        .shop{
-            margin-top: 1rem;
-        }
+    .row {
+      max-height: 400px;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      
+      
+
+      .col{
+        width: calc(100% * 3/12);
+      }
     }
-    
   }
 }
 </style>
