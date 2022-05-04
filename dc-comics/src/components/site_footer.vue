@@ -77,14 +77,20 @@ export default {
 
 <style lang="scss">
 #site_footer {
+  background-image: url("../assets/img/footer-bg.jpg");
+
   ul {
     list-style: none;
   }
 
   .container {
+    background-image: url('../assets/img/dc-logo-bg.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    
     width: 1080px;
     margin: auto;
-    background-color: gray;
+    display: flex;
 
     .row {
       max-height: 400px;
@@ -94,11 +100,23 @@ export default {
       flex-wrap: wrap;
       align-content: flex-start;
 
-      .col{
-        width: calc(100% * 3/12);
-        margin-top:1rem;
-        
-        
+      .col {
+        width: calc(100% * 3 / 12);
+        margin-top: 1rem;
+
+        h3 {
+          color: white;
+        }
+
+        nav {
+          ul {
+            li {
+              a {
+                color: gray;
+              }
+            }
+          }
+        }
       }
     }
   }
