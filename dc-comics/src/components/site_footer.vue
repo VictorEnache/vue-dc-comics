@@ -88,6 +88,8 @@ export default {
     background-repeat: no-repeat;
     background-position: right;
     
+    padding: 50px 0;
+    
     width: 1080px;
     margin: auto;
     display: flex;
@@ -113,6 +115,8 @@ export default {
             li {
               a {
                 color: gray;
+                font-size: 12px;
+                text-decoration: none;
               }
             }
           }
