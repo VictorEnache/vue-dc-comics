@@ -67,7 +67,7 @@ export default {
                  list-style: none;
                  display: flex;
                  column-gap: 35px;
-                 font-size: 11px;
+                 font-size: 12px;
 
                  li{
                      padding: 50px 0;

@@ -1,16 +1,17 @@
 <template>
   <main id="site_main">
     <div class="container">
-        <div class="row">
-            <div class="card" :key='fumetto' v-for='fumetto in fumetti'>
-                <div class="image">
-                    <img :src="fumetto.thumb" alt="">
-                </div>
-                <div class="text">
-                    {{fumetto.series}}
-                </div>
-            </div>
+      <div class="row">
+        <div class="card" :key="fumetto" v-for="fumetto in fumetti">
+          <div class="image">
+            <img :src="fumetto.thumb" alt="" />
+          </div>
+          <div class="text">
+            {{ fumetto.series }}
+          </div>
         </div>
+      </div>
+      <button>LOAD MORE</button>
     </div>
   </main>
 </template>
@@ -120,35 +121,43 @@ export default {
   .container {
     width: 1080px;
     margin: auto;
-    display: flex;
-    align-items: center;
+    padding-bottom: 20px;
 
-    .row{
-        display: flex;
-        flex-wrap: wrap;
-        column-gap: 22px;
-        
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 22px;
+      
+      padding-bottom: 50px;
 
-        .card{
-          padding-top: 50px;
-            width: calc(100% / 6 - 22px + 22px/6);
+      .card {
+        padding-top: 50px;
 
-            .image{
-              
+        width: calc(100% / 6 - 22px + 22px / 6);
 
-                img{
-                    width: 100%;
-                    aspect-ratio: 1 / 1;
-                    object-fit: cover;
-                    object-position: top;
-                }
-
-            }
-
-            .text{
-              text-transform: uppercase;
-            }
+        .image {
+          img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            object-position: top;
+          }
         }
+
+        .text {
+          text-transform: uppercase;
+          font-size: 12px;
+        }
+      }
+    }
+
+    button{
+      display: block;
+      margin: auto;
+      border: none;
+      background-color: blue;
+      color: white;
+      padding: 13px 60px;
     }
   }
 }
