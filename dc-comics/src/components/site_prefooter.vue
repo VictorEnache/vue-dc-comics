@@ -3,11 +3,7 @@
         <div class="container">
             <nav>
                 <ul>
-                    <li><img src="../assets/img/buy-comics-digital-comics.png" alt=""><span>DIGITAL COMICS</span></li>
-                    <li><img src="../assets/img/buy-comics-merchandise.png" alt=""><span>DIGITAL COMICS</span></li>
-                    <li><img src="../assets/img/buy-comics-digital-comics.png" alt=""><span>DIGITAL COMICS</span></li>
-                    <li><img src="../assets/img/buy-comics-digital-comics.png" alt=""><span>DIGITAL COMICS</span></li>
-                    <li><img src="../assets/img/buy-comics-digital-comics.png" alt=""><span>DIGITAL COMICS</span></li>
+                    <li :key='card' v-for='card in cards'><img :src="card.link" alt=""><span>{{card.name}}</span></li>
                 </ul>
             </nav>
         </div>
@@ -18,7 +14,34 @@
 
 
 export default {
-    name: 'site_prefooter'
+    name: 'site_prefooter',
+
+    data() {
+        return{
+            cards:[
+                {
+                    link: require("../assets/img/buy-comics-digital-comics.png"),
+                    name: 'DIGITAL COMICS'
+                },
+                                {
+                    link: require("../assets/img/buy-comics-merchandise.png"),
+                    name: 'DC MERCHANDISE'
+                },
+                                {
+                    link: require("../assets/img/buy-comics-subscriptions.png"),
+                    name: 'SUBSCRIPTION'
+                },
+                                {
+                    link: require("../assets/img/buy-comics-shop-locator.png"),
+                    name: 'COMIC SHOP LOCATOR'
+                },
+                                {
+                    link: require("../assets/img/buy-dc-power-visa.svg"),
+                    name: 'DC POWER VISA'
+                },
+            ]
+        }
+    }
 }
 </script>
 
@@ -35,20 +58,23 @@ export default {
                 ul{
                     list-style: none;
                     display: flex;
-                    justify-content: space-between;
+                    
                     padding: 50px 0;
+                    
 
-                    li{
-                        height: 55px;
+                    li{         
+                        width: calc(100%/5);              
                         display: flex;
                         align-items: center;
-                        font-size:14px;
+                        font-size:12px;
                         color: white;
                         
 
                         img{
-                            height: 100%;
-                            object-fit: cover;
+                            
+                            height: 55px;
+                            width: 55px;
+                            object-fit: contain;
                         }
 
                         span{
